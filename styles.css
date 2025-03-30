@@ -1,0 +1,66 @@
+.auto-btn {
+  position: fixed;
+  right: 20px;
+  z-index: 999999;
+  padding: 14px 22px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.1s ease-in-out;
+}
+.auto-btn:active { transform: scale(0.95); }
+
+.btn-start { bottom: 80px; background: #28a745; }
+.btn-stop { bottom: 20px; background: #dc3545; }
+
+.btn-start.pulsing {
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 10px #28a74588;
+}
+
+.btn-start.paused {
+  animation: blink 1s infinite;
+  background: #ff9800 !important;
+}
+
+.btn-stop.glow {
+  animation: glow 1.5s infinite;
+  box-shadow: 0 0 10px #dc354588;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(40,167,69,0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(40,167,69,0); }
+  100% { box-shadow: 0 0 0 0 rgba(40,167,69,0); }
+}
+@keyframes glow {
+  0% { box-shadow: 0 0 8px #dc3545; }
+  50% { box-shadow: 0 0 18px #dc3545; }
+  100% { box-shadow: 0 0 8px #dc3545; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Estilo para popup externo */
+.external-welcome {
+  font-family: sans-serif;
+  background: #121212;
+  color: white;
+  padding: 20px;
+}
+.external-welcome button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  font-size: 16px;
+  background: #00b9fe;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Auto Apply Bot",
+    "version": "1.0",
+    "description": "Auto-applies to Easy Apply jobs on LinkedIn job search.",
+    "permissions": [
+      "tabs",
+      "scripting",
+      "activeTab",
+      "storage"
+    ],
+    "host_permissions": [
+      "https://www.linkedin.com/jobs/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icons/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/jobs/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
